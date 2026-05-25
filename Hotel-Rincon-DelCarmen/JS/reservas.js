@@ -120,3 +120,29 @@ function cancelReservation(reservationId) {
     renderMyReservations();
   }
 }
+
+
+
+// Validar fechas de reserva
+function validarFechas(fechaEntrada, fechaSalida) {
+    const entrada = new Date(fechaEntrada);
+    const salida = new Date(fechaSalida);
+
+    return salida > entrada;
+}
+
+// Calcular total de noches
+function calcularNoches(fechaEntrada, fechaSalida) {
+  const entrada = new Date(fechaEntrada);
+  const salida = new Date(fechaSalida);
+
+  const diferencia = salida - entrada;
+  return diferencia / (1000 * 60 * 60 * 24);
+}
+
+
+function calcularTotal(precioPorNoche, noches) {
+  return precioPorNoche * noches;
+}
+
+console.log("Sistema avanzado de reservas cargado.");
