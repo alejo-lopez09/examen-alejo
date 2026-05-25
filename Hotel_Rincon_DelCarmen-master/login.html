@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión - Hotel Rincón del Carmen</title>
+    
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/responsive.css" />
+    <link rel="stylesheet" href="./CSS/estilacos.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="img/hotel/logo/logo.png" alt="logo del hotel">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="reservas.html">Reservas</a>
+                <a href="contacto.html">Contacto</a>
+                <div id="navAuth"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-section">
+        <div class="auth-form-container">
+            <h1>Iniciar Sesión</h1>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" class="input" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
+                    <input type="password" id="loginPassword" class="input" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Iniciar Sesión</button>
+            </form>
+
+            <p class="auth-link">
+                ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+            </p>
+
+            <div class="demo-info">
+                <h3>Datos de Prueba</h3>
+                <p><strong>Admin:</strong><br>
+                Email: admin@hotelcarmen.com<br>
+                Contraseña: admin123</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Hotel Rincón del Carmen</h3>
+                <p>Tu mejor experiencia de descanso y comodidad.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>Email: hotelrincon@gmail.com | Tel: 321 226 0838 | Cúcuta - Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="JS/storage.js"></script>
+<script src="JS/utils.js"></script>
+<script src="JS/auth.js"></script>
+<script src="JS/login.js"></script>
+</body>
+</html>

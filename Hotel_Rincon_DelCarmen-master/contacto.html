@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Hotel Rincón del Carmen</title>
+    
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/responsive.css" />
+    <link rel="stylesheet" href="./CSS/estilacos.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="img/hotel/logo/logo.png" alt="logo del hotel">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="reservas.html">Reservas</a>
+                <a href="contacto.html">Contacto</a>
+                <div id="navAuth"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container contacto-section">
+        <h1>Contacto</h1>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                
+                <div class="info-item">
+                    <h3>📍 Dirección</h3>
+                    <p>Calle Principal 123<br>Cúcuta, Norte de Santander - Colombia</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>📞 Teléfono</h3>
+                    <p><a href="tel:+573212260838" style="color:inherit;">+57 321 226 0838</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>✉️ Email</h3>
+                    <p><a href="mailto:hotelrincon@gmail.com" style="color:inherit;">hotelrincon@gmail.com</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>💬 WhatsApp</h3>
+                    <p><a href="https://wa.me/573212260838" target="_blank" style="color:inherit;">+57 321 226 0838</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>🕐 Horarios de Atención</h3>
+                    <p>Lunes - Viernes: 8:00 AM - 6:00 PM<br>
+                       Sábado - Domingo: 9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h2>Envíanos un Mensaje</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Nombre</label>
+                        <input type="text" id="contactName" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Teléfono</label>
+                        <input type="tel" id="contactPhone" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Asunto</label>
+                        <input type="text" id="contactSubject" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Mensaje</label>
+                        <textarea id="contactMessage" class="input" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h2>Ubicación</h2>
+            <div class="map-placeholder">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63559.53014954792!2d-72.53086!3d7.89391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6645f9e2f3c1c3%3A0xd26bb32d4b7a3b2e!2sCúcuta%2C%20Norte%20de%20Santander!5e0!3m2!1ses!2sco!4v1716000000000"
+                    width="100%"
+                    height="400"
+                    style="border:0; border-radius: 12px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación Hotel Rincón del Carmen - Cúcuta, Colombia">
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Hotel Rincón del Carmen</h3>
+                <p>Tu mejor experiencia de descanso y comodidad.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>Email: hotelrincon@gmail.com | Tel: 321 226 0838 | Cúcuta - Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="JS/storage.js"></script>
+<script src="JS/utils.js"></script>
+<script src="JS/auth.js"></script>
+<script src="JS/contacto.js"></script>
+</body>
+</html>

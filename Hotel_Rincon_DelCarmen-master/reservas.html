@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservas - Hotel Rincón del Carmen</title>
+    
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/reservas.css" />
+    <link rel="stylesheet" href="./CSS/responsive.css" />
+    <link rel="stylesheet" href="./CSS/estilacos.css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="img/hotel/logo/logo.png" alt="logo del hotel">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="reservas.html">Reservas</a>
+                <a href="contacto.html">Contacto</a>
+                <div id="navAuth"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container reservations-section">
+        <h1>Buscar y Reservar Habitaciones</h1>
+        
+        <div class="search-form">
+            <h2>Encuentra tu habitación ideal</h2>
+            <form id="searchForm">
+                <div class="grid grid-3">
+                    <div class="form-group">
+                        <label for="checkIn">Fecha de Entrada</label>
+                        <input type="date" id="checkIn" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Fecha de Salida</label>
+                        <input type="date" id="checkOut" class="input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="people">Cantidad de Personas</label>
+                        <input type="number" id="people" class="input" min="1" max="20" value="1" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Buscar Disponibilidad</button>
+            </form>
+        </div>
+
+        <div id="availableRooms" class="rooms-container"></div>
+
+        <div class="my-reservations">
+            <h2>Mis Reservas</h2>
+            <div id="myReservations" class="reservations-list"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Hotel Rincón del Carmen</h3>
+                <p>Tu mejor experiencia de descanso y comodidad.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>Email: hotelrincon@gmail.com | Tel: 321 226 0838 | Cúcuta - Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="JS/storage.js"></script>
+<script src="JS/utils.js"></script>
+<script src="JS/auth.js"></script>
+<script src="JS/data.js"></script>
+<script src="JS/Components/card-habitacion.js"></script>
+<script src="JS/reservaciones.js"></script>
+<script src="JS/reservas.js"></script>
+</body>
+</html>

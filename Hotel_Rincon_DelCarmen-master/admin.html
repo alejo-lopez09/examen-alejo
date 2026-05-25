@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Admin - Hotel Rincón del Carmen</title>
+    
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/responsive.css" />
+    <link rel="stylesheet" href="./CSS/estilacos.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="img/hotel/logo/logo.png" alt="logo del hotel">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="reservas.html">Reservas</a>
+                <a href="contacto.html">Contacto</a>
+                <div id="navAuth"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container admin-section">
+        <h1>Panel de Administración</h1>
+
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="rooms">Gestionar Habitaciones</button>
+            <button class="tab-btn" data-tab="reservations">Gestionar Reservas</button>
+        </div>
+
+        <!-- TAB: Gestionar Habitaciones -->
+        <div id="rooms" class="tab-content active">
+            <div class="admin-form">
+                <h3>Agregar Nueva Habitación</h3>
+                <form id="addRoomForm">
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label for="roomName">Nombre de la Habitación</label>
+                            <input type="text" id="roomName" class="input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="roomPrice">Precio por Noche ($)</label>
+                            <input type="number" id="roomPrice" class="input" min="0" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label for="roomCapacity">Capacidad (personas)</label>
+                            <input type="number" id="roomCapacity" class="input" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="roomBeds">Cantidad de Camas</label>
+                            <input type="number" id="roomBeds" class="input" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomDescription">Descripción</label>
+                        <textarea id="roomDescription" class="input" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomServices">Servicios (separados por comas)</label>
+                        <input type="text" id="roomServices" class="input" placeholder="WiFi, TV, AC, Minibar">
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Agregar Habitación</button>
+                </form>
+            </div>
+
+            <div class="admin-list">
+                <h3>Habitaciones Registradas</h3>
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Capacidad</th>
+                                <th>Camas</th>
+                                <th>Descripción</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="roomsList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Gestionar Reservas -->
+        <div id="reservations" class="tab-content">
+            <div class="admin-list">
+                <h3>Todas las Reservas</h3>
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Huésped</th>
+                                <th>Habitación</th>
+                                <th>Entrada</th>
+                                <th>Salida</th>
+                                <th>Personas</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservationsList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Hotel Rincón del Carmen</h3>
+                <p>Tu mejor experiencia de descanso y comodidad.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>Email: hotelrincon@gmail.com | Tel: 321 226 0838 | Cúcuta - Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="JS/storage.js"></script>
+<script src="JS/utils.js"></script>
+<script src="JS/auth.js"></script>
+<script src="JS/admin.js"></script>
+<script src="JS/admin-panel.js"></script>
+</body>
+</html>
