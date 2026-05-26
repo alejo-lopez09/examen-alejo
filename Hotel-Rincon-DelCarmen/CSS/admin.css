@@ -417,3 +417,28 @@
     }
 
 }
+.factura {
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+@media print {
+
+    body * {
+        visibility: hidden;
+    }
+
+    #facturaContainer,
+    #facturaContainer * {
+        visibility: visible;
+    }
+
+    #facturaContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
